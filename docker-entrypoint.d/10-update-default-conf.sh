@@ -19,9 +19,11 @@ server {
   }
   location /.auth {
     internal;
+    proxy_pass $AUTH_REQUEST_URI;
+    proxy_pass_header Authorization;
     proxy_pass_request_body off;
     proxy_set_header Content-Length "";
-    proxy_pass $AUTH_REQUEST_URI;
+    proxy_set_header X-Original-URI \$request_uri;
   }
   error_page   500 502 503 504  /50x.html;
   location = /50x.html {
