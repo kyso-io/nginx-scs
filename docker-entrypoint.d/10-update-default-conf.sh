@@ -4,7 +4,7 @@
 
 set -e
 
-if [ "$HTML_ROOT" ]; then
+if [ -z "$HTML_ROOT" ]; then
   HTML_ROOT="/usr/share/nginx/html"
 fi
 if [ "$AUTH_REQUEST_URI" ]; then
