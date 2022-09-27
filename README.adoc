@@ -8,8 +8,11 @@ available on a directory using an auth_request_uri if passed as a parameter.
 - `AUTH_REQUEST_URI`: Url to use as the auth_request proxy, only used if the
   variable is set.
 
+- `NO_AUTH_PREFIX`: If present when `AUTH_REQUEST_URI` is set the location
+  referenced by this prefix does not use authentication.
+
 - `HTML_ROOT`: if present, we use that directory as the root of the HTTP
   server.
 
 
-// vim: ts=4:sw=4:et
+// vim: ts=2:sw=2:et
